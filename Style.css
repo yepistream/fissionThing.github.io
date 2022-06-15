@@ -1,0 +1,44 @@
+@font-face {
+    font-family: dick;
+    src: url(minecraft.ttf);
+}
+
+
+img{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    z-index: -5;
+}
+
+*{
+    font-family: dick;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+}
+
+#Narrator{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: pre-line;
+    left: 0;
+    right: 0;
+    color:red;
+    z-index: 1;
+    text-align: center;
+}
+#narLook , #speedThreshold{
+    position: absolute;
+    z-index: -2;
+}
+#Canvas{
+    position: absolute;
+    z-index: -1;
+}
