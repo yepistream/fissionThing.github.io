@@ -22,7 +22,6 @@ class StaticObject{
         c.beginPath();
         c.arc(this.x,this.y,this.scale,0,Math.PI*2,false)
         c.fillStyle = this.color;
-        console.log("ass");
         c.fill();
     }
     update(){
@@ -54,7 +53,7 @@ class DynamicObject{
     _update(){
         this.x = this.x + this.velocity.x;
         this.y = this.y + this.velocity.y;
-        neuron.draw();
+        this.draw();
         
     }
     update(){
@@ -90,9 +89,7 @@ const StaticObjects = [
    // new StaticObject(innerWidth/2+500,innerHeight/2,120,'green', 'neucloisCore') // the neuclois.
 ]
 
-StaticObjects.forEach(object => {
-    object.draw();
-})
+
 
 function particleSpawn(x,y,size,amount, color, velSpeed ) {
     for (let i = 0; i < amount; i++) {
@@ -154,5 +151,18 @@ addEventListener('click', (event) => {
         object.isClicked = false;
     });
 });
+
+addEventListener('touchstart', (event) => {
+    DynamicObjects.forEach(object => {
+        const dist = Math.hypot(event.changedTouches[0].clientX - object.x, event.changedTouches[0].clientY - object.y);
+        if(dist - object.scale < 1){
+            //console.log(object.name);
+            object.isClicked = true;
+            
+        }
+        //console.log(dist);
+    });
+})
+
 
 animate();

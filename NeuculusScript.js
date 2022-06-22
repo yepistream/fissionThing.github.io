@@ -7,7 +7,8 @@ const ass = (element) => element.name;
 const lvlUrls = [
     "./Index.html",
     "./MovmentChall.html",
-    "./ObsticaleChall.html"
+    "./ObsticaleChall.html",
+    "./credits.html"
 ]
 
 neuclois.update = () =>{
@@ -32,6 +33,7 @@ neuclois.update = () =>{
         console.log("ass");
     }
 }
+
 StaticObjects.push(neuclois);
 
 
