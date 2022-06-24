@@ -1,4 +1,4 @@
-const neuron = new DynamicObject(100,innerHeight/2,30,'blue',{x:0,y:0},'neuronPlayer');
+const neuron = new DynamicObject(innerWidth/2,innerHeight-30,30,'blue',{x:0,y:0},'neuronPlayer');
 
 let _playerSpeed = 4;
 let _playerCurrentSpeed = 1;

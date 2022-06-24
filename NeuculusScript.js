@@ -1,4 +1,4 @@
-const neuclois = new StaticObject(innerWidth/2+500,innerHeight/2,120,'green', 'neucloisCore');
+const neuclois = new StaticObject(innerWidth/2,120,120,'green', 'neucloisCore');
 
 const bomb = document.querySelector('img');
 

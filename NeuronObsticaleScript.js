@@ -3,12 +3,12 @@ let amountToSpawn = 3;
 
 let offset = 150;
 
-let yoffsetSpawn = 50;
+let yoffsetSpawn = 100;
 
 function spawnObsticales(amount,x,y) {
 for(let i = 0; i < amount; i++){  
   
-  const obsNeuron = new DynamicObject(x,y,30,'grey',{x:0,y:8},'neuronObsticale' + i);
+  const obsNeuron = new DynamicObject(x,y,30,'grey',{x:4,y:0},'neuronObsticale' + i);
 
   obsNeuron.update = () => {
     if(obsNeuron.collision.otherCollName == neuron.name){
@@ -16,19 +16,20 @@ for(let i = 0; i < amount; i++){
       DynamicObjects.splice(DynamicObjects.findIndex(isLargeNumber),1);    
       document.location.reload(true);
     }
-    if(obsNeuron.y > innerWidth - obsNeuron.scale - 400){
-      obsNeuron.y = 0;
+    if(obsNeuron.x > innerWidth){
+      obsNeuron.x = 0;
+     // alert("Pos: " + obsNeuron.x);
     }
   }
   DynamicObjects.push(obsNeuron);
   console.log("Spawned an obsticale: " + obsNeuron);
   x = x+offset;
-  y = y-offset;
+  y = y-yoffsetSpawn;
   }
 }
 
 
-spawnObsticales(amountToSpawn,innerWidth/2,0);
+spawnObsticales(amountToSpawn,0,innerHeight/2+100);
 
 
 

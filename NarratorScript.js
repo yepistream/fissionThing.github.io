@@ -24,3 +24,11 @@ function myLoop() {
   
 myLoop();   
 
+addEventListener('mousedown', (event) => { //TODO: for debugging purposes use mousedown, on release change to touchdown.
+    document.getElementById("Narrator").style.zIndex = '-5';
+});
+addEventListener('touchdown', (event) => { //TODO: for debugging purposes use mousedown, on release change to touchdown.
+  document.getElementById("Narrator").style.zIndex = '-5';
+});
+
+
