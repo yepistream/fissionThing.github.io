@@ -33,6 +33,7 @@ img{
     color:red;
     z-index: 1;
     text-align: center;
+    font-size: x-large;
 }
 #narLook , #speedThreshold{
     position: absolute;
